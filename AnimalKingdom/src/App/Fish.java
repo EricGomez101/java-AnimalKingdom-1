@@ -8,23 +8,22 @@ public class Fish extends Animals
     }
 
     @Override
-    public void move()
+    public String move()
     {
-        System.out.println(getName() + " swim");
         decFood();
-
+        return "swim";
     }
-    @Override
-    public void breath ()
-    {
-        System.out.println(getName() + " gills");
 
+    @Override
+    public String breath ()
+    {
+        return "gills";
     }
-    @Override
-    public void reproduce ()
-    {
-        System.out.println(getName() + " eggs");
 
+    @Override
+    public String reproduce ()
+    {
+        return "eggs";
     }
 }
 

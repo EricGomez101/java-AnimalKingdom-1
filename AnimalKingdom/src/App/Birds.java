@@ -8,22 +8,21 @@ public class Birds extends Animals
     }
 
     @Override
-    public void move()
+    public String move()
     {
-        System.out.println(getName() + " fly");
         decFood();
+        return "fly";
+    }
+    @Override
+    public String breath ()
+    {
+        return "lungs";
 
     }
     @Override
-    public void breath ()
+    public String reproduce ()
     {
-        System.out.println(getName() + " lungs");
-
-    }
-    @Override
-    public void reproduce ()
-    {
-        System.out.println(getName() + " eggs");
+        return "eggs";
 
     }
 }

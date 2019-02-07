@@ -8,24 +8,22 @@ public class Mammals extends Animals
     }
 
     @Override
-    public void move ()
+    public String move ()
     {
-        System.out.println(getName() + " walks");
         decFood();
-
+        return "walks";
     }
+
     @Override
-    public void breath ()
+    public String breath ()
     {
-        System.out.println(getName() + " lungs");
-
+        return "lungs";
     }
+
     @Override
-    public void reproduce ()
+    public String reproduce ()
     {
-        System.out.println(getName() + " live births");
-
+        return "live births";
     }
-
 
 }
