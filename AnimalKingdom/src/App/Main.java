@@ -83,10 +83,8 @@ public class Main
         animals.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         animals.forEach(a -> System.out.println(a.getName() + " | " + a.move()));
         System.out.println("*******************");
-        System.out.println("Sorting by their breathing method");
-        System.out.println("name | breathing method");
-        animals.sort((a1, a2) -> a1.breath().compareToIgnoreCase(a2.breath()));
-        animals.forEach(a -> System.out.println(a.getName() + " | " + a.breath()));
+        System.out.println("filter by lungs.");
+        testAnimals(animals, (a -> a.breath().contains("lungs")));
         System.out.println("******************");
         System.out.println("Sorting by breath method and year 1758");
         testAnimals(animals, a -> (a.breath().contains("lungs")) && (a.getYear() == 1758));
